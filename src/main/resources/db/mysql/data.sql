@@ -47,7 +47,15 @@ INSERT IGNORE INTO pets VALUES (11, 'Freddy', '2000-03-09', 5, 9);
 INSERT IGNORE INTO pets VALUES (12, 'Lucky', '2000-06-24', 2, 10);
 INSERT IGNORE INTO pets VALUES (13, 'Sly', '2002-06-08', 1, 10);
 
-INSERT IGNORE INTO visits VALUES (1, '2010-03-04', 'rabies shot', 7 ,null);
-INSERT IGNORE INTO visits VALUES (2, '2011-03-04', 'rabies shot',8 ,null);
-INSERT IGNORE INTO visits VALUES (3, '2009-06-04', 'neutered', 8 ,null);
-INSERT IGNORE INTO visits VALUES (4, '2008-09-04', 'spayed', 7 ,null);
+INSERT IGNORE INTO facturas VALUES(1, 10, '2002-08-07', 20, 1);
+INSERT IGNORE INTO facturas VALUES(2, 10, '2002-08-07', 20, 1);
+INSERT IGNORE INTO facturas VALUES(3, 10, '2002-08-07', 20, 1);
+INSERT IGNORE INTO facturas VALUES(4, 10, '2002-08-07', 20, 1);
+INSERT IGNORE INTO facturas VALUES(5, 10, '2002-08-07', 20, 1);
+
+INSERT IGNORE INTO visits VALUES (1, '2010-03-04', 'rabies shot', 7, 1);
+INSERT IGNORE INTO visits VALUES (2, '2011-03-04', 'rabies shot', 8, 2);
+INSERT IGNORE INTO visits VALUES (3, '2009-06-04', 'neutered', 8, 3);
+INSERT IGNORE INTO visits VALUES (4, '2008-09-04', 'spayed', 7, 4);
+
+INSERT IGNORE INTO petclinic.users VALUES (1,'Leo', 'LeoRock', '2000-09-08' ,1);

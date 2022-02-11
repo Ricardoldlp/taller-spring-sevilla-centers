@@ -24,7 +24,9 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 
@@ -61,12 +63,23 @@ public class Owner extends Person {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets;
     
-   
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cliente")
+    private Set<Bill> bills;
 
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "owner", cascade = CascadeType.ALL)
+	private User user;
 
-   
     
-     public void setPets(Set<Pet> pets) {
+    
+    public Set<Bill> getBills() {
+    return bills;
+    }
+
+    public void setBills(Set<Bill> bills) {
+    this.bills = bills;
+    }
+    
+    public void setPets(Set<Pet> pets) {
 	this.pets = pets;
     }
 
